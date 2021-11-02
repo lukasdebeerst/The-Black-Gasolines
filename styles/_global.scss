@@ -1,0 +1,30 @@
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.content__container {
+    width: 95vw;
+    margin: 0 auto;
+
+    // @include breakpoint(tablet-ls){
+    //     width: 80vw;
+    // }
+
+    // @include breakpoint(desktop-wide){
+    //     width: 1500px;
+    // }
+}
+
+
+.subtitle {
+    
+}
+
