@@ -1,0 +1,48 @@
+@import '../../styles/global';
+@import '../../styles/variables';
+
+
+
+.container {
+    background-color: black;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(tablet){
+        padding: 10vh 0px;
+    }
+
+    @include breakpoint(desktop){
+        padding: 230px 0px;
+    }
+
+    .header {
+        margin-bottom: 20px;
+
+        .subtitle {
+            margin-bottom: 10px;
+        }
+    }
+
+    .description {
+        width: 80vw;
+        text-align: justify;
+        margin: 0 auto;
+        line-height: 23px;
+
+        @include breakpoint(tablet){
+            width: 60vw;
+        }
+
+        @include breakpoint(desktop){
+            width: 400px;
+        }
+    }
+
+    .cta {
+        padding: 20px 0px;
+        display: flex;
+        justify-content: center;
+    }
+}

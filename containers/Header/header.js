@@ -25,19 +25,19 @@ const Header = () => {
                 <h2 className={Style.hidden}>Reviews</h2>
                 <div className={Style.review}>
                     <a href={''}>
-                        <h3 className={Style.title}>Theater in je oor (★★★★)</h3>
+                        <h3 className={Style.reviewTitle}>Theater in je oor (★★★★)</h3>
                         <p>Dansende Beren</p>
                     </a>
                 </div>
                 <div className={Style.review}>
                     <a href={""}>
-                        <h3 className={Style.title}>Theater in je oor (★★★★)</h3>
+                        <h3 className={Style.reviewTitle}>Theater in je oor (★★★★)</h3>
                         <p>Dansende Beren</p>
                     </a>
                 </div>
                 <div className={Style.review}>
                     <a href={""}>
-                        <h3 className={Style.title}>Theater in je oor (★★★★)</h3>
+                        <h3 className={Style.reviewTitle}>Theater in je oor (★★★★)</h3>
                         <p>Dansende Beren</p>
                     </a>
                 </div>

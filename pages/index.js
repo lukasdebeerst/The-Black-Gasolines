@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 // import Navigation from '../containers/Navigation/navigation';
 import Header from "../containers/Header/header";
-// import AboutUs from "../containers/AboutUs/aboutUs";
+import AboutUs from "../containers/AboutUs/aboutUs";
 // import TourDates from "../containers/TourDates/tourDates";
 
 
@@ -14,8 +14,8 @@ export default function Home() {
     {/* <Navigation /> */}
     <main>
       <Header />
-      {/* <AboutUs />
-      <TourDates /> */}
+      <AboutUs />
+      {/* <TourDates /> */}
     </main>
     </>
   )

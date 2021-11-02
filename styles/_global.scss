@@ -34,10 +34,21 @@
 
 .title{
     font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    text-align: center;
+
+    @include breakpoint(tablet){
+        font-size: 35px;
+    }
 }
 
 .subtitle {
     color: $secundaryColor;
     font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    @include breakpoint(tablet){
+        font-size: 24px;
+    }
 
 }
