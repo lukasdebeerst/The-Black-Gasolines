@@ -1,7 +1,9 @@
+import Style from "./primaryButton.module.scss";
+
 const PrimaryButton = ({content, link}) => {
 
     return (
-        <a href={link}>{content}</a>
+        <a className={Style.button} href={link}>{content}</a>
     )
 
 }

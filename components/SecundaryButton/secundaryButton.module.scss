@@ -1,0 +1,14 @@
+@import "../../styles/mixins";
+
+.button {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+
+
+    @include breakpoint(tablet){
+        padding: 0;
+    }
+}

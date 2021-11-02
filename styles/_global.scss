@@ -1,3 +1,7 @@
+@import "./typography";
+@import "./variables";
+@import "./mixins";
+
 
 .hidden {
     position: absolute;
@@ -14,17 +18,26 @@
     width: 95vw;
     margin: 0 auto;
 
-    // @include breakpoint(tablet-ls){
-    //     width: 80vw;
-    // }
+    @include breakpoint(tablet){
+        width: 70vw;
+    }
 
-    // @include breakpoint(desktop-wide){
-    //     width: 1500px;
-    // }
+    @include breakpoint(tablet-ls){
+        width: 80vw;
+    }
+
+    @include breakpoint(desktop-wide){
+        width: 1300px;
+    }
 }
 
+
+.title{
+    font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+}
 
 .subtitle {
-    
-}
+    color: $secundaryColor;
+    font-family: "Baron Neue", Arial, Helvetica, sans-serif;
 
+}

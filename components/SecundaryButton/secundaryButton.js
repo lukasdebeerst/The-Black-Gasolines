@@ -1,7 +1,9 @@
+import Style from "./secundaryButton.module.scss";
+
 const SecundaryButton = ({content, link}) => {
 
     return (
-        <a href={link}>{content}</a>
+        <a className={Style.button} href={link}>{content}</a>
     )
 
 }

@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.button {
+    background-color: $primaryColor;
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 15px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+
+}
