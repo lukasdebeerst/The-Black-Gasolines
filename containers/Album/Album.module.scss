@@ -1,0 +1,65 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+    background: linear-gradient($backgroundColorDark, $backgroundColorLight 50%);
+
+    @include breakpoint(tablet-ls) {
+        padding: 100px 0px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column-reverse;
+
+        @include breakpoint(tablet-ls){
+            flex-flow: row-reverse;
+            justify-content: space-between;
+            flex: 0 0 50%;
+        }
+
+        .text {
+            @include breakpoint(tablet-ls){
+                width: 45%;
+            }
+        }
+
+
+        .image {
+            box-shadow: 8px 11px 28px rgba(0,0,0,50);
+            margin-bottom: 20px;
+            
+            @include breakpoint(tablet-ls){
+                width: 45%;
+            }
+            
+            @include breakpoint(desktop){
+                width: auto;
+
+            }
+        }
+
+        
+    }  
+
+    .reviews {
+
+        @include breakpoint(tablet){
+            margin-top: 20px;
+        }
+
+        @include breakpoint(tablet-ls){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include breakpoint(desktop){
+            margin-top: 50px;
+        }
+    }
+
+}

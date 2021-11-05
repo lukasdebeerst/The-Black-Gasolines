@@ -1,48 +1,99 @@
-@import '../../styles/global';
-@import '../../styles/variables';
-
-
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .container {
-    background-color: black;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient($backgroundColorLight, $backgroundColorDark , $backgroundColorDark , $backgroundColorDark);
 
-    @include breakpoint(tablet){
-        padding: 10vh 0px;
+    @include breakpoint(tablet-ls){
+        padding: 200px 0px 100px;
     }
 
-    @include breakpoint(desktop){
-        padding: 230px 0px;
-    }
 
-    .header {
-        margin-bottom: 20px;
-
-        .subtitle {
-            margin-bottom: 10px;
-        }
-    }
-
-    .description {
-        width: 80vw;
-        text-align: justify;
-        margin: 0 auto;
-        line-height: 23px;
-
-        @include breakpoint(tablet){
-            width: 60vw;
-        }
-
-        @include breakpoint(desktop){
-            width: 400px;
-        }
-    }
-
-    .cta {
-        padding: 20px 0px;
+    .content {
         display: flex;
-        justify-content: center;
+        flex-flow: column-reverse;
+    
+        @include breakpoint(desktop){
+            display: block;
+        }
+    
+    
+        .images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 20px;
+            // width: 90vw;
+            // margin: 0 auto;
+    
+            @include breakpoint(tablet){
+                display: flex;
+                grid-gap: 0px;
+                justify-content: space-between;
+            }
+    
+            @include breakpoint(desktop){
+                position: absolute;
+                right: 6vw;
+            }
+
+            @include breakpoint(desktop-wide){
+                justify-content: flex-end;
+                width: 1300px;
+                right: auto;
+            }
+            .image_1 {
+                width: 120px;
+
+                @include breakpoint(desktop){
+                    width: auto;
+                }
+            }
+
+
+            .image_2 {
+                width: 120px;
+
+                @include breakpoint(desktop){
+                    margin: -50px 10px 0px 20px;
+                    width: auto;
+                }
+            }
+
+            .image_3 {
+                width: 120px;
+
+                @include breakpoint(desktop){
+                    margin: 30px 20px 0px 10px;
+                    width: auto;
+                }
+            }
+
+            .image_4 {
+                width: 120px;
+
+                @include breakpoint(desktop){
+                    width: auto;
+                }
+            }
+        }
+    
+        .data {
+            z-index: 2;
+            position: relative;
+
+            @include breakpoint(desktop){
+                width: 30vw;
+
+            }
+            
+            @include breakpoint(desktop-wide){
+                width: 400px;
+            }
+
+        }
     }
+
+   
 }

@@ -1,0 +1,26 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+    background: $backgroundColorDark;
+
+    .content {
+        @include breakpoint(tablet-ls){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .textContainer {
+            width: 40vw;
+        }
+
+        .image {
+            width: 30vw;
+        }
+
+
+    }
+
+}

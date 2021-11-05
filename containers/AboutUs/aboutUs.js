@@ -1,29 +1,63 @@
-import PrimaryButton from "../../components/PrimaryButton/primaryButton";
-import Style from "./aboutUs.module.scss";
-import background from "../../assets/images/aboutus.png";
+import Image from "next/image";
+import Text from "../../components/Text/Text";
+import Style from "./AboutUs.module.scss";
+
+import Bradley from "../../public/images/band_bradley.png";
+import Justin from "../../public/images/band_justin.png";
+import Lukas from "../../public/images/band_lukas.png";
+import Matthias from "../../public/images/band_matthias.png";
+
 
 const AboutUs = () => {
 
     return (
-        <article className={Style.container} style={{backgroundImage: `url(${background.src}`}}>
-            <div className={Style.content__container}>
-                <div className={Style.header}>
-                    <p className={Style.subtitle}>about us</p>
-                    <h2 className={Style.title}>our story</h2>
+        <article className={Style.container}>
+            <div className={`${Style.content__container} ${Style.content}`}>
+                <div className={Style.images}>
+                    <div className={Style.image_1}>
+                        <Image 
+                            src={Bradley}
+                            alt={"bradley"}
+                            height={282}
+                            width={188}
+                        />
+                    </div>
+                    <div className={Style.image_2}>
+                        <Image 
+                            src={Lukas}
+                            alt={"Lukas"}
+                            height={282}
+                            width={188}
+                        />
+                    </div>
+                    <div className={Style.image_3}>
+                        <Image 
+                            src={Justin}
+                            alt={"Justin"}
+                            height={282}
+                            width={188}
+                        />
+                    </div>
+                    <div className={Style.image_4}>
+                        <Image 
+                            src={Matthias}
+                            alt={"Matthias"}
+                            height={282}
+                            width={188}
+                        />
+                    </div>
                 </div>
-                <p className={Style.description}>
-                    We are The Black Gasolines, a theatrical rock band founded by 
-                    Lukas Debeerst and Bradley Remorie in 2016. After our debut EP 
-                    “Dopamine Rush” in 2018, we’ve changed our drummer to Justin Bruggeman 
-                    and went on a quest to play as much as possible. We played more than 45 
-                    concerts each year with stops in Ghent, Antwerp, Amsterdam and London and 
-                    released 2 singles “Long Way Suicide” and “Kangaroo Days”.
-                </p>
-                <div className={Style.cta}>
-                    <PrimaryButton link={"#"} content={"Learn More"} />
-                </div>
+                <section className={`${Style.data}`}>
+                    <Text  
+                        subtitle={"about us"}
+                        title={"our story"}
+                        content={"We are The Black Gasolines, a theatrical rock band founded by Lukas Debeerst and Bradley Remorie in 2016. After our debut EP “Dopamine Rush” in 2018, we’ve changed our drummer to Justin Bruggeman and went on a quest to play as much as possible. We played more than 45 concerts each year with stops in Ghent, Antwerp, Amsterdam and London and released 2 singles “Long Way Suicide” and “Kangaroo Days”."}
+                        primaryButton={"Learn more"}
+                        primaryButtonLink={"#"}
+                    />
+                </section>
             </div>
-           
+            
         </article>
     )
 

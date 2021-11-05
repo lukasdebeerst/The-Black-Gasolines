@@ -1,31 +1,37 @@
-import PrimaryButton from "../../components/PrimaryButton/primaryButton";
+import Style from "./Tourdates.module.scss";
+import Text from "../../components/Text/Text";
+import Concert from "../../components/Concert/Concert";
 
-const TourDates = () => {
+const Tourdates = () => {
 
     return (
-        <article>
-            <div>
-                <h2>Come and see us live</h2>
-                <p>Tour Dates</p>
+        <article className={Style.container}>
+            <div className={Style.content__container}>
+                <Text 
+                    title={"tour dates"}
+                    subtitle={"The Black Gasolines"}
+                />
+                <div className={Style.concerts}>
+                    <Concert 
+                        day={6}
+                        month={"Nov"}
+                        title={"De Mozaïek"}
+                        location={"Kortrijk"}
+                        ticketsLink={"#"}
+                        infoLink={"#"}
+                    />
+                    <Concert 
+                        day={6}
+                        month={"Nov"}
+                        title={"De Mozaïek"}
+                        location={"Kortrijk"}
+                        infoLink={"#"}
+                    />
+                </div>  
             </div>
-            <section>
-                <div>
-                    <span>6</span>
-                    <span>Nov</span>
-                </div>
-                <div>
-                    <h3>De Mozaiek</h3>
-                    <span>Kortrijk</span>
-                </div>
-                <div>
-                    <span>Tickets</span>
-                    <span>Info</span>
-                </div>
-            </section>
-            <PrimaryButton content={"See more dates"}/>
         </article>
     )
 
 }
 
-export default TourDates;
+export default Tourdates;

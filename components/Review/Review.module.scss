@@ -1,0 +1,32 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+
+    text-align: center;
+    padding-bottom: 20px;
+
+    @include breakpoint(tablet){
+        padding-bottom: 30px;
+    }
+
+    @include breakpoint(tablet-ls){
+        text-align: left;
+    }
+
+    .quote {
+        font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        margin-bottom: 5px;
+
+        @include breakpoint(tablet){
+            font-size: 21px;
+        }
+    } 
+
+    .link {
+        cursor: pointer;
+    }
+
+}

@@ -2,9 +2,14 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-
 .container {
-    background: $backgroundColorDark;
-    min-height: 100vh;
-    padding-top: 200px;
+    background: $backgroundColorLight;
+
+    .discography  {
+
+        .album {
+            
+        }
+
+    }
 }

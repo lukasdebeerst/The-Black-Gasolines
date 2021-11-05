@@ -1,0 +1,48 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+
+    background: linear-gradient($backgroundColorDark, $backgroundColorLight);
+
+
+    .members {
+        @include breakpoint(tablet){
+            // display: flex;
+            // flex-wrap: wrap;
+            // justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include breakpoint(desktop){
+            // display: flex;
+            // justify-content: space-evenly;
+            // align-items: center;
+            grid-template-columns: repeat(4, 1fr);
+
+            margin-top: 150px;
+
+
+            position: relative;
+        }
+        
+        .member_2 {
+            
+            @include breakpoint(desktop){
+                margin-top: 100px;
+                position: relative;
+            }
+
+        }
+
+        .member_3 {
+
+            @include breakpoint(desktop){
+                margin-top: -100px;
+                position: relative;
+            }
+        }
+    }
+}

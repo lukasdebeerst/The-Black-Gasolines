@@ -1,0 +1,45 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+
+    @include breakpoint(desktop){
+        justify-content: flex-start;
+        align-items:flex-start;
+    }
+
+    .name {
+        font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+        padding-top: 10px;
+        font-size: 21px;
+
+        @include breakpoint(tablet-ls){
+            font-size: 40px;
+            width: 250px;
+        }
+    }
+    
+    .instrument {
+        font-family: "Baron Neue", Arial, Helvetica, sans-serif;
+        color: $secundaryColor;
+        padding-bottom: 20px;
+    }
+
+    .image {
+        width: 60%;
+
+        @include breakpoint(tablet){
+            width: 90%;
+        }
+
+        @include breakpoint(tablet-ls){
+            width: auto;
+        }
+    }
+}
+

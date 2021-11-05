@@ -1,0 +1,44 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.container {
+
+    position: fixed;
+    width: 100vw;
+    padding: 20px 0px;
+    z-index: 999;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .hamburger {
+            @include breakpoint(tablet-ls){
+                display: none;
+            }
+        }
+
+        .nav_container {
+            display: none;
+            @include breakpoint(tablet-ls){
+                display: block;
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                li {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+    
+    padding: 20px 0px;
+
+    .content {
+        text-align: justify;
+        line-height: 25px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+
+        @include breakpoint(tablet-ls){
+            margin-bottom: 30px;
+        }
+    }
+
+    .subtitle {
+        margin-bottom: 10px;
+    }
+
+    .cta {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-flow: column;
+        margin-top: 20px;
+
+        a { 
+            margin-bottom: 15px;
+        }
+
+        @include breakpoint(tablet){
+            flex-flow: row;
+
+            a {
+                margin-bottom: 0px;
+                margin-right: 15px;
+            }
+        }
+
+        @include breakpoint(tablet-ls){
+            justify-content: flex-start;
+        }
+    }
+
+}

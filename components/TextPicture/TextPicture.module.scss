@@ -1,0 +1,43 @@
+@import "../../styles/global";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+    background: $backgroundColorDark;
+    padding: 50px 0px;
+
+    .content {
+        display: flex;
+        flex-flow: column-reverse;
+
+        @include breakpoint(tablet-ls){
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+
+        .text {
+            @include breakpoint(tablet-ls){
+                width: 45vw;
+            }
+
+            @include breakpoint(desktop-wide){
+                width: 700px;
+            }
+        }
+
+        .image {
+            @include breakpoint(tablet-ls){
+                width: 30vw;
+            }
+
+            @include breakpoint(desktop){
+                width: auto;
+            }
+        }
+        
+
+    }
+}
